@@ -1,0 +1,31 @@
+@import './commonStyles.css';
+
+.MuiDrawer-paper {
+  background: #000000;
+  color: #ffffff;
+  border-right: none;
+  box-shadow: 2px 0 16px rgba(255, 255, 255, 0.7);
+}
+
+.logo {
+  composes: common-header;
+  letter-spacing: 4px;
+  font-size: 28px;
+  position: relative;
+  margin: 0;
+  padding: 28px 0;
+  text-align: center;
+}
+.logo::after {
+  content: '';
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  width: 80px;
+  height: 5px;
+  background: linear-gradient(90deg, #ffffff, #cccccc);
+  transform: translateX(-50%);
+  border-radius: 5px;
+}
+
+/* Removed list-item, list-label, list-icon styles as they are moved to commonStyles.css */

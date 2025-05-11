@@ -1,0 +1,56 @@
+@import './commonStyles.css';
+
+.MuiAppBar-root {
+  background: #000000 !important;
+  color: #ffffff !important;
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.7) !important;
+  position: sticky;
+  z-index: 1100;
+}
+
+.MuiToolbar-root {
+  padding-left: 32px;
+  padding-right: 32px;
+  display: flex;
+  justify-content: center;
+}
+
+.MuiButton-root.header-title {
+  composes: common-header;
+  font-size: 1.5rem !important;
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+
+.MuiButton-root.header-title::after {
+  content: '';
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #ffffff, #cccccc);
+  transform: translateX(-50%);
+  border-radius: 4px;
+}
+
+.MuiButton-root.logout-btn {
+  composes: common-button;
+  color: white !important;
+  font-weight: 700 !important;
+  padding: 8px 24px !important;
+  border-radius: 16px !important;
+  transition: all 0.4s ease !important;
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.7) !important;
+}
+
+.MuiButton-root.logout-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(255, 255, 255, 0.9) !important;
+}
+
+.MuiButton-root.logout-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 6px 16px rgba(255, 255, 255, 0.6) !important;
+}

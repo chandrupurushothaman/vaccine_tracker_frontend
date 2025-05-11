@@ -1,0 +1,39 @@
+@import './commonStyles.css';
+
+/* Modal styles with bolder colors and improved alignment */
+.add-student-modal-box {
+}
+
+.modal {
+  composes: common-shadow;
+  background-color: #000000;
+  color: #ffffff;
+  border-radius: 16px;
+  padding: 32px;
+  text-align: left;
+}
+
+.modal-header {
+  composes: common-header;
+  font-size: 1.75rem;
+  padding-bottom: 16px;
+  margin-bottom: 24px;
+  border-bottom: 3px solid #ffffff;
+}
+
+.modal-body {
+  composes: common-text;
+}
+
+.modal-footer {
+  margin-top: 32px;
+  text-align: left;
+}
+
+.modal-button {
+  composes: common-button;
+}
+
+.modal-button:hover {
+  background: linear-gradient(90deg, #ffffff, #000000);
+}

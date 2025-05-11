@@ -1,0 +1,43 @@
+.count {
+  font-size: 3.5rem !important;
+  font-weight: 900 !important;
+  color: #2c11bd  !important;
+  text-align: center;
+}
+
+.icon {
+  width: 100%;
+  padding: 16px;
+  border-radius: 20px;
+  background-color: #007c91; /* darker cyan */
+  transition: box-shadow 0.4s ease;
+}
+
+
+
+.student {
+  color: #0097a7 !important; /* darker cyan */
+  background-color: #0097a788 !important;
+  border-radius: 12px;
+  padding: 12px 24px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.vaccinated {
+  color: #f50e0e88 !important; /* amber accent */
+  background-color: #ffb30088 !important;
+  border-radius: 12px;
+  padding: 12px 24px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.percentage {
+  color: #ecf0f1 !important;
+  background-color: #2c3e5088 !important;
+  border-radius: 12px;
+  padding: 12px 24px;
+  font-weight: 700;
+  text-align: center;
+}
