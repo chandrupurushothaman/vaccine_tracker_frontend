@@ -157,7 +157,6 @@ const AddVaccineModal = ({ open, handleClose, refreshVaccines }) => {
                 </Box>
                 
                 <form style={{ padding: 20 }}>
-                    {/* API Error Alert */}
                     {apiError && (
                         <Alert 
                             severity="error" 

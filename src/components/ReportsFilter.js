@@ -88,7 +88,6 @@ const ReportsFilter = ({getFilteredData=() => {}}) => {
     }
     return (
         <Paper sx={{overflow: 'scroll', padding: "10px" }}>
-            {/* <Typography>Choose Filter</Typography> */}
             <Grid container direction="column" spacing={2} sx={{ alignItems: "baseline", width: "100%" }}>
                 {filters.map((filter, index) => <Box key={index} sx={{ width: "100%" }}>
                     <Grid container spacing={1} sx={{ alignItems: "center" }}>
@@ -121,7 +120,6 @@ const ReportsFilter = ({getFilteredData=() => {}}) => {
                                 >
                                     <MenuItem value="" disabled>--Select Filter Value--</MenuItem>
                                     {vaccines.map(vaccine => <MenuItem value={vaccine.name} id={vaccine._id}>{vaccine?.name || 'No Name'}</MenuItem>)}
-                                    {/* {[{_id: "1", name: "Vacc 1"}, {_id: "2", name: "Vacc 2"}, {_id: "3", name: "Vacc 3"}].map(vaccine => <MenuItem value={vaccine._id} id={vaccine._id}>{vaccine?.name || 'No Name'}</MenuItem>)} */}
                                 </Select>}
                                 {filter.filterType === "vaccinationStatus" && <Select 
                                     size='small'
@@ -152,7 +150,6 @@ const ReportsFilter = ({getFilteredData=() => {}}) => {
                                 variant="outlined"
                                 size="small"
                                 color="success"
-                                // sx={{ marginLeft: "auto" }}
                                 startIcon={<AddIcon/>}
                                 onClick={() => {
                                     addNewFilter(index);
@@ -163,7 +160,6 @@ const ReportsFilter = ({getFilteredData=() => {}}) => {
                                 variant="outlined"
                                 size="small"
                                 color="error"
-                                // sx={{ marginLeft: "auto" }}
                                 startIcon={<RemoveIcon/>}
                                 onClick={() => {
                                     removeFilter(index);
@@ -177,7 +173,6 @@ const ReportsFilter = ({getFilteredData=() => {}}) => {
                         variant="contained"
                         size="small"
                         color="success"
-                        // sx={{ marginLeft: "auto" }}
                         onClick={() => {
                             handleGenerateReport();
                         }}

@@ -4,10 +4,10 @@ import { setLocalStorage } from "../utils/local.js";
 
 const LoginPage = () => {
     const handleLogin = (event) => {
-        event.preventDefault(); // Prevent default form submission
-        const token = "sampleToken"; // Replace with actual token from login API
+        event.preventDefault(); 
+        const token = "sampleToken"; 
         setLocalStorage("token", token);
-        window.location.pathname = "/dashboard"; // Redirect to dashboard
+        window.location.pathname = "/dashboard"; 
     };
 
     return (

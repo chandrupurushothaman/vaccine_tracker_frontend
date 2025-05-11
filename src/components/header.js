@@ -16,21 +16,14 @@ const header = () => {
         name: "Reports",
         path: "/reports"
     }];
-    // useEffect(() => {
-        
-    // }, []);
+
     const handleLogout = () => {
-        // Clear the token from local storage
         localStorage.removeItem("token");
-        // Redirect to login page
         window.location.reload();
     };
     return (
         <AppBar position="sticky">
             <Toolbar>
-                {/* <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-                    VAX-TRACK
-                </Typography> */}
                 <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, justifyContent: 'center' }}>
                 <div className="page-title-container">
                     <Button
@@ -40,14 +33,6 @@ const header = () => {
                         {pages.find((page) => page.path === window.location.pathname)?.name || "Dashboard"}
                     </Button>
                     </div>
-                    {/* {pages.map((page) => (
-                    <Button
-                        key={page}
-                        sx={{ my: 2, color: 'white', display: 'block' }}
-                    >
-                        {page}
-                    </Button>
-                    ))} */}
                 </Box>
                 <Button color="inherit" sx={{ justifySelf: 'flex-end'}} onClick={handleLogout}>Logout</Button>
             </Toolbar>

@@ -53,7 +53,6 @@ const AddStudentModal = ({ open, handleClose, refreshStudents }) => {
         
         setFieldErrors(errors);
         
-        // Return true if no errors (all values are empty strings)
         return Object.values(errors).every(error => error === '');
     };
     const handleChange = (key, value) => {
@@ -212,11 +211,6 @@ const AddStudentModal = ({ open, handleClose, refreshStudents }) => {
                                 Student ID: {newStudent?.student_id}
                             </Typography>
                         </Grid>
-                        {/* <Grid item xs={12}>
-                            <Typography variant="body1" sx={{ textAlign: 'center' }}>
-                                Message: {newStudent?.message}
-                            </Typography>
-                        </Grid> */}
                     </Grid>
                     }
                 </form>

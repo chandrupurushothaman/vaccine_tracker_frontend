@@ -5,7 +5,6 @@ import Dropzone from "react-dropzone";
 import "./Modal.css"
 import { _post } from "../api/client";
 
-//https://www.npmjs.com/package/react-dropzone
 
 const style = {
     position: 'absolute',
@@ -31,7 +30,6 @@ const UploadStudentModal = ({ open, handleClose, refreshStudents }) => {
             reader.onload = (event) => {
                 const text = event.target.result;
                 const lines = text.split('\n');
-                // Assuming the first line is the header
                 const numberOfRecords = lines.length - 1;
                 resolve(numberOfRecords);
             };

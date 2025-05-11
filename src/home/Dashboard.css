@@ -9,14 +9,14 @@
   width: 100%;
   padding: 16px;
   border-radius: 20px;
-  background-color: #007c91; /* darker cyan */
+  background-color: #007c91; 
   transition: box-shadow 0.4s ease;
 }
 
 
 
 .student {
-  color: #0097a7 !important; /* darker cyan */
+  color: #0097a7 !important;
   background-color: #0097a788 !important;
   border-radius: 12px;
   padding: 12px 24px;
@@ -25,7 +25,7 @@
 }
 
 .vaccinated {
-  color: #f50e0e88 !important; /* amber accent */
+  color: #f50e0e88 !important;
   background-color: #ffb30088 !important;
   border-radius: 12px;
   padding: 12px 24px;

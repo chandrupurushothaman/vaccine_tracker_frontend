@@ -20,7 +20,6 @@ const UpcomingVaccinations = ({upcomingDrives=[],onVaccineClick=()=>{}}) => {
                 justifyContent: 'center',
                 padding: 3,
                 margin: 2,
-                // backgroundColor: '#f9f9f9',
                 borderRadius: 1,
             }}
         >

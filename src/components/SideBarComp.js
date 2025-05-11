@@ -9,7 +9,6 @@ const DrawerBody = ({activeLink='', onLinkClick=()=>{}, ...props}) => {
         <Toolbar sx={{ display: 'flex', justifyContent: 'center', padding: '16px 0' }} onClick={() => onLinkClick('/dashboard')}>
         <h2 className='logo' style={{ cursor: 'pointer' }}>VACCINE TRACKER</h2>
         </Toolbar>
-        {/* <Divider /> */}
         <List sx={{ padding: "20px 0px" }}>
           {[{
               name: 'Dashboard',
@@ -52,34 +51,12 @@ const SideBarComp = () => {
         setActiveLink(path);
         window.location.pathname = path;
     };
-
-    // Remove this const when copying and pasting into your project.
-    // const container = window !== undefined ? () => window.document.body : undefined;
     return (
         <Box
             component="nav"
             sx={{ width: { sm: drawerWidth }, flexShrink: { sm: 0 } }}
             aria-label="mailbox folders"
         >
-            {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
-            {/* <Drawer
-                container={container}
-                variant="temporary"
-                open={true}
-                // onTransitionEnd={handleDrawerTransitionEnd}
-                // onClose={handleDrawerClose}
-                sx={{
-                    display: { xs: 'block', sm: 'none' },
-                    '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
-                }}
-                slotProps={{
-                    root: {
-                        keepMounted: true, // Better open performance on mobile.
-                    },
-                }}
-            >
-                {drawer}
-            </Drawer> */}
             <Drawer
                 variant="permanent"
                 sx={{

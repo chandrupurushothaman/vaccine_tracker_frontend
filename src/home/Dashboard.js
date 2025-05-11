@@ -88,7 +88,6 @@ const Dashboard = () => {
                     </Grid>
                 </Grid>
             </Grid>
-            {/* Modal for displaying vaccination details */}
             <VaccinationDetailsModal
                 open={modalOpen}
                 handleClose={handleCloseModal}

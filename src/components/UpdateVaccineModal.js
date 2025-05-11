@@ -31,7 +31,6 @@ const UpdateVaccineModal = ({ updateData, handleClose, refreshVaccines }) => {
     });
     const [newVaccine, setNewVaccine] = React.useState(null);
     
-    // Error states
     const [apiError, setApiError] = React.useState(null);
     const [fieldErrors, setFieldErrors] = React.useState({
         scheduled_date: '',
@@ -48,7 +47,6 @@ const UpdateVaccineModal = ({ updateData, handleClose, refreshVaccines }) => {
         });
         setShowModal(true);
         
-        // Reset error states when modal opens
         setApiError(null);
         setFieldErrors({
             scheduled_date: '',
@@ -72,13 +70,11 @@ const UpdateVaccineModal = ({ updateData, handleClose, refreshVaccines }) => {
     };
     
     const handleChange = (key, value) => {
-        // Clear field error when user edits the field
         setFieldErrors({
             ...fieldErrors,
             [key]: ''
         });
         
-        // Clear API error when form changes
         setApiError(null);
         
         setVaccineData({
@@ -161,7 +157,6 @@ const UpdateVaccineModal = ({ updateData, handleClose, refreshVaccines }) => {
                 </Box>
                 
                 <form style={{ padding: 20 }}>
-                    {/* API Error Alert */}
                     {apiError && (
                         <Alert 
                             severity="error" 

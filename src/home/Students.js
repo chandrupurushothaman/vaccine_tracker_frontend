@@ -58,7 +58,7 @@ const Students = ({}) => {
     const handleChangeRowsPerPage = (event) => {
         const newRowsPerPage = parseInt(event.target.value, 10);
         setRowsPerPage(newRowsPerPage);
-        setPage(0); // Reset to first page when changing rows per page
+        setPage(0);  
         getStudents(0, newRowsPerPage);
     };
     

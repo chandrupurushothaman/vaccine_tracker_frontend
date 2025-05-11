@@ -5,31 +5,25 @@ const formatDate = (date) => {
   return moment(date).format("DD/MM/YYYY");
 }
 const formatClass = (value) => {
-  // Handle null, undefined, empty arrays
   if (!value || !Array.isArray(value) || value.length === 0) return "None";
 
   try {
-    // Convert all values to numbers and filter out invalid entries
     const validClasses = value
       .map(val => Number(val))
       .filter(val => !isNaN(val) && val > 0);
 
     if (validClasses.length === 0) return "None";
 
-    // Sort classes numerically
     const sortedClasses = validClasses.sort((a, b) => a - b);
 
-    // Format classes into ranges
     const ranges = [];
     let rangeStart = sortedClasses[0];
     let rangeEnd = rangeStart;
 
     for (let i = 1; i < sortedClasses.length; i++) {
       if (sortedClasses[i] === rangeEnd + 1) {
-        // Extend the current range
         rangeEnd = sortedClasses[i];
       } else {
-        // End the current range and start a new one
         if (rangeStart === rangeEnd) {
           ranges.push(`${rangeStart}`);
         } else {
@@ -40,7 +34,6 @@ const formatClass = (value) => {
       }
     }
 
-    // Add the last range
     if (rangeStart === rangeEnd) {
       ranges.push(`${rangeStart}`);
     } else {
@@ -87,13 +80,10 @@ const handleStudentErrors = (err, fieldErrors, setFieldErrors, setApiError) => {
   if (err.response && err.response.data) {
     const errorData = err.response.data;
 
-    // Handle array of error messages
     if (Array.isArray(errorData.errors)) {
-      // Format multiple errors with line breaks
       const formattedErrors = errorData.errors.join('\n');
       setApiError(formattedErrors);
 
-      // Map errors to specific fields
       const newFieldErrors = { ...fieldErrors };
 
       errorData.errors.forEach(error => {
@@ -117,10 +107,8 @@ const handleStudentErrors = (err, fieldErrors, setFieldErrors, setApiError) => {
 
       setFieldErrors(newFieldErrors);
     } else if (errorData.message) {
-      // Single error message
       setApiError(errorData.message);
     } else {
-      // Generic error
       setApiError("Failed to create student. Please try again.");
     }
   } else {

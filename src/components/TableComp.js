@@ -44,7 +44,6 @@ const TableComp = forwardRef(({
     });
   }, [rows, filters, columns]);
 
-  // Expose filteredRows to parent via ref
   useImperativeHandle(ref, () => ({
     getFilteredData: () => filteredRows
   }));

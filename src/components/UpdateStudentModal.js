@@ -74,7 +74,6 @@ const UpdateStudentModal = ({ updateData, handleClose, refreshStudents }) => {
         
         setFieldErrors(errors);
         
-        // Return true if no errors
         return Object.values(errors).every(error => error === '');
     }
     const handleSubmit = () => {
@@ -82,7 +81,6 @@ const UpdateStudentModal = ({ updateData, handleClose, refreshStudents }) => {
         updateStudent();
     }
     const updateStudent = async () => {
-        // console.log("updateStudent", updateReq);
         if (!updateReq.vaccination) {
             setFieldErrors({
                 vaccination: 'Please select a vaccination'
@@ -207,11 +205,6 @@ const UpdateStudentModal = ({ updateData, handleClose, refreshStudents }) => {
                                 Student Vaccine Details Updated Successfully
                             </Typography>
                         </Grid>
-                        {/* <Grid item xs={12}>
-                            <Typography variant="body1" sx={{ textAlign: 'center' }}>
-                                Vaccination: {JSON.stringify(updatedStudent?.vaccinations)}
-                            </Typography>
-                        </Grid> */}
                     </Grid>
                     }
                 </form>

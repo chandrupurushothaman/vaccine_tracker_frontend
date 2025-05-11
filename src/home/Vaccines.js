@@ -58,7 +58,7 @@ const Vaccines = ({}) => {
     const handleChangeRowsPerPage = (event) => {
         const newRowsPerPage = parseInt(event.target.value, 10);
         setRowsPerPage(newRowsPerPage);
-        setPage(0); // Reset to first page when changing rows per page
+        setPage(0);
         getVaccines(0, newRowsPerPage);
     };
     return (
@@ -71,13 +71,6 @@ const Vaccines = ({}) => {
                 <Typography className="vaccine-count"  sx={{ fontWeight: "bold", color: "gray" }}>
                     Total Drives: {totalVaccines || vaccines.length}
                 </Typography>
-                {/* <Button
-                    variant="contained"
-                    size="small"
-                    color="warning"
-                    startIcon={<UploadIcon />}
-                    sx={{ marginLeft: "auto" }}
-                >Bulk Upload</Button> */}
                 <Button 
                     variant="contained"
                     size="small"
@@ -93,7 +86,6 @@ const Vaccines = ({}) => {
                 <TableComp
                     title="Vaccination Drives"
                     columns={[
-                        // { id: "_id", label: "ID", align: "center", format: (value) => value.slice(8) },
                         { id: "name", label: "Name", align: "center" },
                         { id: "vaccine", label: "Vaccine", align: "center" },
                         { id: "classes", label: "Classes", align: "center", format: (value) => formatClass(value) },
